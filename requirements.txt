@@ -1,0 +1,13 @@
+matplotlib
+pandas 
+pyarrow
+wandb
+opencv-python
+scipy
+scikit-learn
+scikit-image
+einops
+timm
+torchmetrics
+lightning
+fvcore
