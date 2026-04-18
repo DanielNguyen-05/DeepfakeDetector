@@ -13,7 +13,7 @@ import timm
 import lightning as L
 from fvcore.nn import FlopCountAnalysis, parameter_count
 
-from DeepfakeDetector.BNext.src.bnext import BNext
+from BNext.src.bnext import BNext
 
 class SELayer(nn.Module):
     def __init__(self, channel, reduction=16):
@@ -101,24 +101,24 @@ class DeepfakeDetector(L.LightningModule):
         # loss parameters
         self.pos_weight = pos_weight
         
-        if self.new_channels > 0:
-            self.adapter = nn.Conv2d(in_channels=3+self.new_channels, out_channels=3, 
-                                     kernel_size=3, stride=1, padding=1)
-        else:
-            self.adapter = nn.Identity()
-        
         # if self.new_channels > 0:
-        #     self.adapter = nn.Sequential(
-        #         nn.Conv2d(in_channels=3+self.new_channels, out_channels=3+self.new_channels, 
-        #                 kernel_size=3, stride=1, padding=1),
-        #         SELayer(channel=3+self.new_channels), # Thêm chú ý vào 5 kênh đầu vào
-        #         nn.Conv2d(in_channels=3+self.new_channels, out_channels=3, 
-        #                 kernel_size=1) # Nén về 3 kênh cho Backbone
-        #     )
+        #     self.adapter = nn.Conv2d(in_channels=3+self.new_channels, out_channels=3, 
+        #                              kernel_size=3, stride=1, padding=1)
         # else:
         #     self.adapter = nn.Identity()
+        
+        if self.new_channels > 0:
+            self.adapter = nn.Sequential(
+                nn.Conv2d(in_channels=3+self.new_channels, out_channels=3+self.new_channels, 
+                        kernel_size=3, stride=1, padding=1),
+                SELayer(channel=3+self.new_channels), # Thêm chú ý vào 5 kênh đầu vào
+                nn.Conv2d(in_channels=3+self.new_channels, out_channels=3, 
+                        kernel_size=1) # Nén về 3 kênh cho Backbone
+            )
+        else:
+            self.adapter = nn.Identity()
             
-        # disables the last layer of the backbone
+        # # disables the last layer of the backbone
         # self.inplanes = self.base_model.fc.in_features
         # self.base_model.deactive_last_layer=True
         # self.base_model.fc = nn.Identity()

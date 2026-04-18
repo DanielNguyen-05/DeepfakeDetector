@@ -8,13 +8,13 @@ import torch
 from torch.utils.data import DataLoader
 import lightning as L
 from lightning.pytorch.loggers import WandbLogger
-from DeepfakeDetector.cifake_dataset import CIFAKEDataset
 
-from DeepfakeDetector.coco_fake_dataset import COCOFakeDataset
-from DeepfakeDetector.dffd_dataset import DFFDDataset
+from cifake_dataset import CIFAKEDataset
+from coco_fake_dataset import COCOFakeDataset
+from dffd_dataset import DFFDDataset
 
-import DeepfakeDetector.model as model
-from DeepfakeDetector.lib.util import load_config
+import model as model
+from lib.util import load_config
 import random
 import numpy as np
 
@@ -85,9 +85,9 @@ if __name__ == "__main__":
     )
 
     # init model
-    # net = model.DeepfakeDetector.load_from_checkpoint(join(cfg["test"]["weights_path"], f"{cfg['dataset']['name']}_{cfg['model']['backbone'][-1]}{'_unfrozen' if not cfg['model']['freeze_backbone'] else ''}.ckpt"))
-    ckpt_path = cfg["test"]["weights_path"]
-    net = model.DeepfakeDetector.load_from_checkpoint(ckpt_path)
+    net = model.DeepfakeDetector.load_from_checkpoint(join(cfg["test"]["weights_path"], f"{cfg['dataset']['name']}_{cfg['model']['backbone'][-1]}{'_unfrozen' if not cfg['model']['freeze_backbone'] else ''}.ckpt"))
+    # ckpt_path = cfg["test"]["weights_path"]
+    # net = model.DeepfakeDetector.load_from_checkpoint(ckpt_path)
     
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     net = net.to(device)

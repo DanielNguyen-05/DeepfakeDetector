@@ -10,13 +10,13 @@ import torch
 from torch.utils.data import DataLoader
 import lightning as L
 from lightning.pytorch.loggers import WandbLogger
-from DeepfakeDetector.cifake_dataset import CIFAKEDataset
 
-from DeepfakeDetector.coco_fake_dataset import COCOFakeDataset
-from DeepfakeDetector.dffd_dataset import DFFDDataset
+from cifake_dataset import CIFAKEDataset
+from coco_fake_dataset import COCOFakeDataset
+from dffd_dataset import DFFDDataset
 
-import DeepfakeDetector.model as model
-from DeepfakeDetector.lib.util import load_config
+import model as model
+from lib.util import load_config
 
 
 
@@ -129,7 +129,7 @@ if __name__ == "__main__":
 
     # start training
     date = datetime.now().strftime("%Y%m%d_%H%M")
-    project = "self_trained"
+    project = "final_trained"
     run_label = args.cfg.split("/")[-1].split(".")[0]
     run = cfg["dataset"]["name"] + f"_{date}_{run_label}"
     logger = WandbLogger(project=project, name=run, id=run, log_model=False)
