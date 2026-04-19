@@ -116,6 +116,36 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 > ⚠️ **Note:** Verify your CUDA version with `nvidia-smi` and choose the matching PyTorch wheel from [pytorch.org](https://pytorch.org/get-started/locally/).
 
+### Step 4 — Clone BNext (Required Dependency)
+ 
+This project depends on the **BNext** backbone from the original paper. Clone it into the project root:
+ 
+```bash
+git clone https://github.com/hpi-xnor/BNext.git
+```
+ 
+### Step 5 — Download BNext Pretrained Weights
+ 
+1. Download the pretrained BNext models from the [official BNext repository](https://github.com/hpi-xnor/BNext/tree/main).
+2. Place the weight files inside the `pretrained/` folder.
+3. **Rename each file** by prefixing it with the corresponding model size:
+| Original filename | Renamed to |
+|---|---|
+| `*.pth` (tiny variant) | `tiny_*.pth` |
+| `*.pth` (small variant) | `small_*.pth` |
+| `*.pth` (middle variant) | `middle_*.pth` |
+| `*.pth` (large variant) | `large_*.pth` |
+ 
+Your `pretrained/` folder should look like:
+ 
+```
+pretrained/
+├── tiny_bnext.pth
+├── small_bnext.pth
+├── middle_bnext.pth
+└── large_bnext.pth
+```
+ 
 ---
 
 ## 📂 Dataset Preparation
