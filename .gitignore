@@ -13,9 +13,12 @@ _*
 BNext/
 datasets/
 weights/
-configs_format/
-weights_format/
 self_trained/
 pretrained/
 logs/
 .env
+configs_old/
+final_trained/
+wandb_old/
+wandb/
+logs/

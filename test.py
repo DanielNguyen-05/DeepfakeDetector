@@ -85,9 +85,9 @@ if __name__ == "__main__":
     )
 
     # init model
-    net = model.DeepfakeDetector.load_from_checkpoint(join(cfg["test"]["weights_path"], f"{cfg['dataset']['name']}_{cfg['model']['backbone'][-1]}{'_unfrozen' if not cfg['model']['freeze_backbone'] else ''}.ckpt"))
-    # ckpt_path = cfg["test"]["weights_path"]
-    # net = model.DeepfakeDetector.load_from_checkpoint(ckpt_path)
+    # net = model.DeepfakeDetector.load_from_checkpoint(join(cfg["test"]["weights_path"], f"{cfg['dataset']['name']}_{cfg['model']['backbone'][-1]}{'_unfrozen' if not cfg['model']['freeze_backbone'] else ''}.ckpt"))
+    ckpt_path = cfg["test"]["weights_path"]
+    net = model.DeepfakeDetector.load_from_checkpoint(ckpt_path)
     
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     net = net.to(device)
