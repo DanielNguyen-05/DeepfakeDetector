@@ -70,21 +70,7 @@ Before feeding the concatenated **6-channel input** (3 RGB + 1 FFT + 1 LBP + 1 G
 
 ## 🧠 Architecture Overview
 
-```
-Input Image (RGB)
- ├──> FFT Extraction   ───┐
- ├──> LBP Extraction   ───┼──> Concat (6 Channels) ──> [ SE-Block ] ──> Conv2D (3 Channels)
- └──> Gabor Filters    ───┘        (Attention)           (Compress)
-                                                               │
-                                                               ▼
-                                                       [ MobileNetV3-Small ]
-                                                               │
-                                                               ▼
-                                                    [ Linear Classifier ]
-                                                               │
-                                                    ┌──────────┴──────────┐
-                                                    ✅ Real              ❌ Fake
-```
+![Demo](images/architecture.png)
 
 ---
 
