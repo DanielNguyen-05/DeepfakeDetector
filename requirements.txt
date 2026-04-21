@@ -12,3 +12,17 @@ torchmetrics
 lightning
 fvcore
 torchinfo
+torch
+torchvision
+fastapi
+uvicorn[standard]
+python-multipart
+opencv-python
+scikit-image
+Pillow
+timm
+lightning
+einops
+fvcore
+torchmetrics
+torchinfo
