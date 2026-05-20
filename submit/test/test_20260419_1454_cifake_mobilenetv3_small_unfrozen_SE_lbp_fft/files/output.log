@@ -1,0 +1,25 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[2KUnsupported operator aten::lift_fresh encountered 1 time(s)
+[2KUnsupported operator aten::sigmoid encountered 1 time(s)
+[2KUnsupported operator aten::expand_as encountered 1 time(s)
+[2KUnsupported operator aten::mul encountered 10 time(s)
+[2KUnsupported operator aten::sub encountered 1 time(s)
+[2KUnsupported operator aten::div encountered 1 time(s)
+[2KUnsupported operator aten::hardswish_ encountered 18 time(s)
+[2KUnsupported operator aten::mean encountered 9 time(s)
+[2KUnsupported operator aten::hardsigmoid encountered 9 time(s)
+[2KUnsupported operator aten::add encountered 6 time(s)
+[2KThe following submodules of the model were never called during the trace of the graph. They may be unused, or they were accessed by direct calls to .forward() or via other python
+methods. In the latter case they will have zeros for statistics, though their statistics will still contribute to their parent calling module.
+base_model.act2, base_model.conv_head, base_model.global_pool
+[2K┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓━━━━━━━[0m 625/625 [2m0:03:12 • 0:00:00[0m [2;4m3.26it/s[0m  [2;4m3.26it/s[0m  m3.26it/s[0m  
+┃[1m [0m[1m       Test metric       [0m[1m [0m┃[1m [0m[1m      DataLoader 0       [0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│[36m [0m[36m          flops          [0m[36m [0m│[35m [0m[35m       70044032.0        [0m[35m [0m│
+│[36m [0m[36m       parameters        [0m[36m [0m│[35m [0m[35m        1518681.0        [0m[35m [0m│
+│[36m [0m[36m        test_acc         [0m[36m [0m│[35m [0m[35m   0.9792500138282776    [0m[35m [0m│
+│[36m [0m[36m        test_auc         [0m[36m [0m│[35m [0m[35m   0.9971151947975159    [0m[35m [0m│
+│[36m [0m[36m        test_loss        [0m[36m [0m│[35m [0m[35m   0.07814668864011765   [0m[35m [0m│
+└───────────────────────────┴───────────────────────────┘
+[2KTesting [38;2;98;6;224m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m 625/625 [2m0:03:12 • 0:00:00[0m [2;4m3.26it/s[0m
+[?25h

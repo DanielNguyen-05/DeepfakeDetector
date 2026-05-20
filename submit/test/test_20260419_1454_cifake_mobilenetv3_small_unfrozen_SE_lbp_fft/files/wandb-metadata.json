@@ -1,0 +1,44 @@
+{
+  "os": "Linux-6.8.0-87-generic-x86_64-with-glibc2.39",
+  "python": "CPython 3.12.3",
+  "startedAt": "2026-04-19T07:54:57.214137Z",
+  "args": [
+    "--cfg",
+    "cifake_mobilenetv3_small_unfrozen_SE_lbp_fft.cfg"
+  ],
+  "program": "/home/cxnam/Desktop/Dangs/DeepfakeDetector/test.py",
+  "codePath": "test.py",
+  "codePathLocal": "test.py",
+  "git": {
+    "remote": "https://github.com/DanielNguyen-05/DeepfakeDetector.git",
+    "commit": "de9f5075fff9c68d32b937fe1666720ac30bbaf9"
+  },
+  "email": "nguyenhaidang26112005@gmail.com",
+  "root": ".",
+  "host": "cxnam-HP-Z800-Workstation",
+  "executable": "/home/cxnam/Desktop/Dangs/DeepfakeDetector/.venv/bin/python",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "gpu": "NVIDIA GeForce RTX 4060 Ti",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "982819848192",
+      "used": "896858656768"
+    }
+  },
+  "memory": {
+    "total": "33594859520"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4060 Ti",
+      "memoryTotal": "17175674880",
+      "cudaCores": 4352,
+      "architecture": "Ada",
+      "uuid": "GPU-31351b8a-531e-1090-b293-f5310012c9a7"
+    }
+  ],
+  "cudaVersion": "12.5",
+  "writerId": "ib2hs5zru83sh9u9b0i81anhg3tv68ku"
+}

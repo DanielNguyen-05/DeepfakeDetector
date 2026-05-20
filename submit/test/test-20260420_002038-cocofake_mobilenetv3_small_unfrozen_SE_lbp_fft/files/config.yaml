@@ -1,0 +1,94 @@
+_wandb:
+    value:
+        cli_version: 0.26.0
+        e:
+            tcwmm87xpoeakvlkt0w7e5j8keckuywc:
+                args:
+                    - --cfg
+                    - configs/coco_mobilenetv3_small_unfrozen_SE_lbp_fft.cfg
+                codePath: test.py
+                codePathLocal: test.py
+                cpu_count: 6
+                cpu_count_logical: 12
+                cudaVersion: "12.5"
+                disk:
+                    /:
+                        total: "982819848192"
+                        used: "896981495808"
+                email: nguyenhaidang26112005@gmail.com
+                executable: /home/cxnam/Desktop/Dangs/DeepfakeDetector/.venv/bin/python
+                git:
+                    commit: de9f5075fff9c68d32b937fe1666720ac30bbaf9
+                    remote: https://github.com/DanielNguyen-05/DeepfakeDetector.git
+                gpu: NVIDIA GeForce RTX 4060 Ti
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 4352
+                      memoryTotal: "17175674880"
+                      name: NVIDIA GeForce RTX 4060 Ti
+                      uuid: GPU-31351b8a-531e-1090-b293-f5310012c9a7
+                host: cxnam-HP-Z800-Workstation
+                memory:
+                    total: "33594859520"
+                os: Linux-6.8.0-87-generic-x86_64-with-glibc2.39
+                program: /home/cxnam/Desktop/Dangs/DeepfakeDetector/test.py
+                python: CPython 3.12.3
+                root: .
+                startedAt: "2026-04-19T17:20:38.705278Z"
+                writerId: tcwmm87xpoeakvlkt0w7e5j8keckuywc
+        m:
+            - "1": trainer/global_step
+              "6":
+                - 3
+              "7": []
+            - "2": '*'
+              "5": 1
+              "6":
+                - 1
+              "7": []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+                - 106
+            "2":
+                - 1
+                - 5
+                - 41
+                - 49
+                - 53
+                - 63
+                - 106
+            "3":
+                - 7
+                - 13
+                - 14
+                - 66
+            "4": 3.12.3
+            "5": 0.26.0
+            "12": 0.26.0
+            "13": linux-x86_64
+add_fft_channel:
+    value: true
+add_gabor_channel:
+    value: false
+add_lbp_channel:
+    value: true
+add_magnitude_channel:
+    value: false
+backbone:
+    value: MobileNetV3-Small
+freeze_backbone:
+    value: false
+learning_rate:
+    value: 0.0001
+num_classes:
+    value: 2
+pos_weight:
+    value: 5.002144537195037
