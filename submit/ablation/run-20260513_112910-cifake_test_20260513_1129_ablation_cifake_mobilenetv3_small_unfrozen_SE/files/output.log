@@ -1,0 +1,23 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[2KUnsupported operator aten::sub encountered 1 time(s)
+[2KUnsupported operator aten::div encountered 1 time(s)
+[2KUnsupported operator aten::hardswish_ encountered 18 time(s)
+[2KUnsupported operator aten::mean encountered 9 time(s)
+[2KUnsupported operator aten::hardsigmoid encountered 9 time(s)
+[2KUnsupported operator aten::mul encountered 9 time(s)
+[2KUnsupported operator aten::add encountered 6 time(s)
+[2KThe following submodules of the model were never called during the trace of the graph. They may be unused, or
+they were accessed by direct calls to .forward() or via other python methods. In the latter case they will
+have zeros for statistics, though their statistics will still contribute to their parent calling module.
+base_model.act2, base_model.conv_head, base_model.global_pool
+[2K┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓━━━━━━━[0m 625/625 [2m0:00:28 • 0:00:00[0m [2;4m22.54it/s[0m  [2;4m22.53it/s[0m  22.53it/s[0m  
+┃[1m [0m[1m       Test metric       [0m[1m [0m┃[1m [0m[1m      DataLoader 0       [0m[1m [0m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│[36m [0m[36m          flops          [0m[36m [0m│[35m [0m[35m       57750912.0        [0m[35m [0m│
+│[36m [0m[36m       parameters        [0m[36m [0m│[35m [0m[35m        1518433.0        [0m[35m [0m│
+│[36m [0m[36m        test_acc         [0m[36m [0m│[35m [0m[35m   0.9837499856948853    [0m[35m [0m│
+│[36m [0m[36m        test_auc         [0m[36m [0m│[35m [0m[35m    0.998201847076416    [0m[35m [0m│
+│[36m [0m[36m        test_loss        [0m[36m [0m│[35m [0m[35m   0.06006244570016861   [0m[35m [0m│
+└───────────────────────────┴───────────────────────────┘
+[2KTesting [38;2;98;6;224m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m 625/625 [2m0:00:28 • 0:00:00[0m [2;4m22.54it/s[0m
+[?25h
