@@ -1,11 +1,11 @@
 _wandb:
     value:
-        cli_version: 0.26.0
+        cli_version: 0.27.0
         e:
-            20jdodlfyn7lupxlkrihzerckgwdwg5q:
+            v9b44dbyajtsuzcs48g7aa2nn9os2v0i:
                 args:
                     - --cfg
-                    - configs/cifake_mobilenetv3_small_unfrozen_SE_lbp_gabor.cfg
+                    - configs/coco_mobilenetv3_small_frozen_SE_lbp_fft.cfg
                 codePath: test.py
                 codePathLocal: test.py
                 cpu_count: 6
@@ -14,11 +14,11 @@ _wandb:
                 disk:
                     /:
                         total: "982819848192"
-                        used: "896883650560"
+                        used: "874231767040"
                 email: nguyenhaidang26112005@gmail.com
                 executable: /home/cxnam/Desktop/Dangs/DeepfakeDetector/.venv/bin/python
                 git:
-                    commit: de9f5075fff9c68d32b937fe1666720ac30bbaf9
+                    commit: b90388919197190782a1edce3efa40ee024fd7c9
                     remote: https://github.com/DanielNguyen-05/DeepfakeDetector.git
                 gpu: NVIDIA GeForce RTX 4060 Ti
                 gpu_count: 1
@@ -30,13 +30,13 @@ _wandb:
                       uuid: GPU-31351b8a-531e-1090-b293-f5310012c9a7
                 host: cxnam-HP-Z800-Workstation
                 memory:
-                    total: "33594859520"
+                    total: "33594871808"
                 os: Linux-6.8.0-87-generic-x86_64-with-glibc2.39
                 program: /home/cxnam/Desktop/Dangs/DeepfakeDetector/test.py
                 python: CPython 3.12.3
                 root: .
-                startedAt: "2026-04-19T12:27:10.636033Z"
-                writerId: 20jdodlfyn7lupxlkrihzerckgwdwg5q
+                startedAt: "2026-05-29T13:18:39.501613Z"
+                writerId: v9b44dbyajtsuzcs48g7aa2nn9os2v0i
         m:
             - "1": trainer/global_step
               "6":
@@ -71,13 +71,13 @@ _wandb:
                 - 14
                 - 66
             "4": 3.12.3
-            "5": 0.26.0
-            "12": 0.26.0
+            "5": 0.27.0
+            "12": 0.27.0
             "13": linux-x86_64
 add_fft_channel:
-    value: false
-add_gabor_channel:
     value: true
+add_gabor_channel:
+    value: false
 add_lbp_channel:
     value: true
 add_magnitude_channel:
@@ -85,10 +85,10 @@ add_magnitude_channel:
 backbone:
     value: MobileNetV3-Small
 freeze_backbone:
-    value: false
+    value: true
 learning_rate:
     value: 0.0001
 num_classes:
     value: 2
 pos_weight:
-    value: 1
+    value: 5.0023917954169335

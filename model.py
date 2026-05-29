@@ -100,12 +100,7 @@ class DeepfakeDetector(L.LightningModule):
         
         # loss parameters
         self.pos_weight = pos_weight
-        
-        # if self.new_channels > 0:
-        #     self.adapter = nn.Conv2d(in_channels=3+self.new_channels, out_channels=3, 
-        #                              kernel_size=3, stride=1, padding=1)
-        # else:
-        #     self.adapter = nn.Identity()
+
         
         if self.new_channels > 0:
             self.adapter = nn.Sequential(

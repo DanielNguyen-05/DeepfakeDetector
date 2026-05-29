@@ -1,17 +1,17 @@
 {
   "os": "Linux-6.8.0-87-generic-x86_64-with-glibc2.39",
   "python": "CPython 3.12.3",
-  "startedAt": "2026-04-19T12:27:10.636033Z",
+  "startedAt": "2026-05-29T13:18:39.501613Z",
   "args": [
     "--cfg",
-    "configs/cifake_mobilenetv3_small_unfrozen_SE_lbp_gabor.cfg"
+    "configs/coco_mobilenetv3_small_frozen_SE_lbp_fft.cfg"
   ],
   "program": "/home/cxnam/Desktop/Dangs/DeepfakeDetector/test.py",
   "codePath": "test.py",
   "codePathLocal": "test.py",
   "git": {
     "remote": "https://github.com/DanielNguyen-05/DeepfakeDetector.git",
-    "commit": "de9f5075fff9c68d32b937fe1666720ac30bbaf9"
+    "commit": "b90388919197190782a1edce3efa40ee024fd7c9"
   },
   "email": "nguyenhaidang26112005@gmail.com",
   "root": ".",
@@ -24,11 +24,11 @@
   "disk": {
     "/": {
       "total": "982819848192",
-      "used": "896883650560"
+      "used": "874231767040"
     }
   },
   "memory": {
-    "total": "33594859520"
+    "total": "33594871808"
   },
   "gpu_nvidia": [
     {
@@ -40,5 +40,5 @@
     }
   ],
   "cudaVersion": "12.5",
-  "writerId": "20jdodlfyn7lupxlkrihzerckgwdwg5q"
+  "writerId": "v9b44dbyajtsuzcs48g7aa2nn9os2v0i"
 }

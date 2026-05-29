@@ -1,0 +1,1 @@
+{"test_auc":0.9342372417449951,"_wandb":{"runtime":180},"test_loss":0.34073036909103394,"parameters":1.518681e+06,"_timestamp":1.778516427724075e+09,"_step":0,"flops":7.0044032e+07,"trainer/global_step":0,"_runtime":180,"test_acc":0.8576499819755554,"epoch":0}
